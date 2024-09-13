@@ -1,94 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Your description" />
+    <meta name="author" content="Your name" />
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+    <meta property="og:site_name" content="InterstellarChain" />
+    <!-- website name -->
+    <meta property="og:site" content="interstellarchain.com" />
+    <!-- website link -->
+    <meta property="og:title" content="Interstellar" />
+    <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="InterstellarChain Is A Website For Institutions To Verify The Authenticity Of Your Documents Online Easily And Safely. Let's Go.." />
+    <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="https://blockhcain-project-ali.on.drv.tw/DevAli/assets/images/home5.jpg" />
+    <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="#ABOUT" />
+    <!-- where do you want your post to link to -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- to have large image post format in Twitter -->
 
-    <meta name="description" content="InterstellarChain is a platform for secure document verification." />
-    <meta name="author" content="N HEMASAI" />
-    <meta property="og:site_name" content="InterstellarChain" />
-    <meta property="og:site" content="https://interstellarchain.com" />
-    <meta property="og:title" content="InterstellarChain" />
-    <meta property="og:description" content="Verify documents securely with InterstellarChain." />
-    <meta property="og:image" content="https://blockhcain-project-ali.on.drv.tw/DevAli/assets/images/home5.jpg" />
-    <meta property="og:url" content="https://interstellarchain.com/#about" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Webpage Title -->
+    <title>InterstellarChain</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link href="./css/main.css" rel="stylesheet" />
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/images/icon.png" />
+  </head>
+  <body>
+    <!--NavBar Start-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <i class="fa-solid fa-dragon home_text"></i>
+          <span class="home_text">Interstellar </span>Chain
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="upload.html">Upload</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="verify.html">Verify</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="delete.html">Delete</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="admin.html">Admin</a>
+            </li>
+           
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-    <title>InterstellarChain</title>
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-    <link href="./css/style.css" rel="stylesheet" />
-    <link rel="icon" href="./assets/images/icon.png" />
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-3">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <i class="fas fa-space-shuttle"></i> InterstellarChain
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="upload.html">Upload</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="verify.html">Verify</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="team.html">Team</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <!-- Home -->
+    <section class="home py-5 d-flex align-items-center" id="header">
+      <div class="container text text-light py-5" data-aos="fade-right">
+        <h1 class="headline text">Build <span class="text-info">trust</span> <br /> into your Organization</h1>
+        <p class="para py-3">
+          The InterstellarChain platform is a leading Document Verification platform <br />
+          designed to bring efficiency and security to your operations.
+        </p>
 
-    <header class="hero-section text-center text-light" style="background: url('./assets/images/hero-bg.jpg') no-repeat center; background-size: cover; height: 100vh;">
-      <div class="container d-flex flex-column justify-content-center align-items-center h-100">
-        <h1 class="display-4">InterstellarChain</h1>
-        <p class="lead mb-5">Revolutionizing document verification with blockchain technology.</p>
-        <a href="verify.html" class="btn btn-primary btn-lg">Verify Now</a>
-      </div>
-    </header>
+        <div class="my-3">
+          <a class="btn bg-danger text-white" href="verify.html">Go Verify</a>
+        </div>
+      </div>
+      <!-- end of container -->
+    </section>
+    <!-- end of home -->
 
-    <section class="about-section py-5">
-      <div class="container text-center">
-        <h2>About Us</h2>
-        <p class="lead mb-4">InterstellarChain is dedicated to providing the highest level of document verification using cutting-edge blockchain technology.</p>
-        <a href="about.html" class="btn btn-outline-primary">Learn More</a>
-      </div>
-    </section>
-
-    <footer class="footer bg-dark text-light py-4">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h4>InterstellarChain</h4>
-            <p>Leading the way in secure, transparent document verification. Trust the blockchain for your verification needs.</p>
-          </div>
-          <div class="col-md-6 text-md-end">
-            <a href="#" class="text-light me-3"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="text-light me-3"><i class="fab fa-linkedin"></i></a>
-            <a href="#" class="text-light"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-        <p class="text-center mt-4">© 2024 InterstellarChain - All Rights Reserved</p>
-      </div>
-    </footer>
-
-    <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="./js/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-  </body>
-</html>
+   
+    <!-- End Footer -->
