@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="OrioChain document upload and verification" />
+    <meta name="author" content="N HemaSai" />
+    <title>Upload Document - InterstellarChain</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./assets/images/icon.png" />
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #f8f9fa;
+        }
+        .navbar-brand, .nav-link {
+            color: #333;
+        }
+        .navbar-toggler-icon {
+            background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvPSIxLjEiIGVuY29kaW5nPSJVVkI1IiBzdHJva2U9IiMwMDAwMDAiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj4KPHBhdGggZD0iTTAgMGgyMDB2MjBIMiIvPjwvc3ZnPg==');
+        }
+        .hero-section {
+            background-color: #e9ecef;
+            padding: 60px 0;
+        }
+        .hero-section h1 {
+            color: #333;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            color: #333;
+            padding: 20px 0;
+        }
+        .footer a {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NavigationBar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fa-solid fa-dragon"></i> InterstellarChain
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="upload.html">Upload</a></li>
+                    <li class="nav-item"><a class="nav-link" href="verify.html">Verify</a></li>
+                    <li class="nav-item"><a class="nav-link" href="delete.html">Delete</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin.html">Admin</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Team</a></li>
+                </ul>
+                <div class="d-flex ms-3">
+                    <button id="loginButton" onclick="connect()" class="btn btn-primary">Login</button>
+                    <button id="logoutButton" onclick="disconnect()" class="btn btn-secondary ms-2">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4">Upload Document</h1>
+            <p class="lead">Upload your documents securely using blockchain technology.</p>
+        </div>
+    </header>
+
+    <!-- Body -->
+    <div class="container my-5">
+        <div class="alert alert-danger d-none" id="metamaskAlert">
+            Please download MetaMask at <a target="_blank" href="https://metamask.io/download">MetaMask Site</a>
+        </div>
+
+        <!-- Wallet Information -->
+        <div class="wallet-status mb-4">
+            <i class="fa-brands fa-connectdevelop"></i>
+            <span id="Exporter-info"></span>
+            <span id="userAddress"></span>
+            <span id="network"></span>
+            <span id="userBalance"></span>
+        </div>
+
+        <!-- Upload Form -->
+        <div class="data-upload mb-4">
+            <input id="doc-file" type="file" accept="application/pdf, image/*" onchange="get_Sha3()" />
+            <span id="note" class="text-danger"></span>
+            <img id="loader" class="d-none" src="files/loader.svg" alt="loader" />
+            <input id="upload_file_button" class="btn btn-primary" type="submit" value="Upload document" onclick="sendHash()" />
+        </div>
+
+        <!-- Transaction Information -->
+        <div class="transaction-status mb-4">
+            <div id="qrcode" class="text-center"></div>
+            <a id="download-link" href="#" class="btn btn-secondary" download="image.png">Download QR-CODE</a>
+            <a id="verfiy" href="#" class="btn btn-secondary" style="background-color: #727272;">Verify Document</a>
+        </div>
+
+        <!-- Recent Uploaded Documents -->
+        <div class="latest-tx mt-5">
+            <h5 id="recent-header" class="text-center">Recent Uploaded Documents</h5>
+            <div class="loading-tx d-none text-center">
+                <img src="./files/tx-loading.svg" alt="loading" />
+            </div>
+            <div class="transactions row"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p>&copy; 2024 OrioChain. All Rights Reserved.</p>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/App.js"></script>
+    <script src="./js/qrcode.min.js"></script>
+</body>
+</html>
